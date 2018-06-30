@@ -1,0 +1,13 @@
+img {
+  width: 350px;
+  height: 200px;
+  padding-top: 10px;
+}
+
+body {
+  font-family: Arial;
+}
+
+li {
+  padding: 10px;
+}

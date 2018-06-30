@@ -20,11 +20,15 @@ CountryDetailView.prototype.createCountryDetail = function (country) {
   const population = this.createCountryListItem('Population', country.population.toLocaleString());
   detailsList.appendChild(population);
 
+  const flags = document.createElement('img');
+  flags.src = `${country.flag}`;
+  const src = document.getElementById(country.flag);
+  const flag = this.createCountryListItem('Image', src);
+  detailsList.appendChild(flags);
+
+
   countryDetail.appendChild(detailsList);
 
-  const flags = document.createElement('img');
-  const flag = this.createCountryListItem('Image', country.flag);
-  detailsList.appendChild(flag);
 
   return countryDetail;
 };
