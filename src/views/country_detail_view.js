@@ -17,10 +17,15 @@ CountryDetailView.prototype.createCountryDetail = function (country) {
   const capital = this.createCountryListItem('Capital', country.capital);
   detailsList.appendChild(capital);
 
-  const population = this.createCountryListItem('Population', country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+  const population = this.createCountryListItem('Population', country.population.toLocaleString());
   detailsList.appendChild(population);
 
   countryDetail.appendChild(detailsList);
+
+  const flags = document.createElement('img');
+  const flag = this.createCountryListItem('Image', country.flag);
+  detailsList.appendChild(flag);
+
   return countryDetail;
 };
 
