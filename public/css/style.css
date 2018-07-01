@@ -1,11 +1,12 @@
 img {
   width: 350px;
   height: 200px;
-  padding-top: 10px;
+  border: 1px solid grey;
 }
 
 body {
   font-family: Arial;
+  padding-left: 10px;
 }
 
 li {

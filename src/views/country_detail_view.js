@@ -1,22 +1,18 @@
-const Countries = require('../models/countries.js');
-const PubSub = require('../helpers/pub_sub');
+// const Countries = require('../models/countries.js');
+// const PubSub = require('../helpers/pub_sub');
 
 const CountryDetailView = function(){
 
 }
 
-CountryDetailView.prototype.bindEvents = function () {
-  PubSub.subscribe('Countries:countries-region-selected-ready', (evt) => {
-    this.createCountryDetail(evt.detail);
-  });
-
-};
-
 CountryDetailView.prototype.createCountryDetail = function (country) {
-  this.container.innerHTML = "";
-  country.forEach((region) => {
+  // this.container.innerHTML = "";
+  // console.log(country);
+  // country.forEach((region) => {
+    // console.log(region);
   const countryDetail = document.createElement('div');
   countryDetail.classList.add('country-detail');
+  //how does classList work?
 
   const name = document.createElement('h3');
   name.textContent = country.name;
@@ -37,7 +33,7 @@ CountryDetailView.prototype.createCountryDetail = function (country) {
 
 
   countryDetail.appendChild(detailsList);
-});
+// });
 
   return countryDetail;
 };
